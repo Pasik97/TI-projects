@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <title>Antykwariat</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="checkSession();">
+
+  <header>
+    <nav>
+      <ul id="list">
+        <li><a href="index.html">Powrót</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <article>
+      <h1>Dokumentacja</h1>
+      <p>Projekt został wykonany przy użyciu technologii RESTful, MongoDB, HTML5, CSS3 oraz JavaScript.</p>
+      <p>Do obsługi navbara wykorzystano metodę click oraz metodę addEventListener, pozwala to na wywołanie odpowiedniej metody.</p>
+      <p>Odnośnik "Książki" - wywołuję funkcję wyswietlKsiazki(), która za pomocą metody GET pobiera dane z bazy MongoDB i tworzy tabelę danych, a także pozwala na dodanie nowych
+      rekordów do lokalnej bazy.</p>
+      <p>Odnośnik "Średnia stanu Książek" - wywołuję funkcję sredniaStanu(), która za pomocą metody GET pobiera dane z bazy MongoDB, liczy ilość książek w bazie
+      oraz oblicza średni stan książek w antykwariacie</p>
+      <p>Odnośnik "Książki zapisane offline" - wyświetla rekordy zapisane lokalnie w Indexeddb, które oczekują na synchronizacje z bazą MongoDB</p>
+      <p>Odnośnik "Panel Użytkownika" - wywołuje funkcję panelUzytkownika(), która wywołuje funkcję checkSession() sprawdzającą czy użytkownik jest już zalogowany czy też nie.</p>
+      <h3>UWAGA: Aby zsynchronizować dane należy zalogować się za pomocą danych Login:"Konrad", Hasło:"Pasik"</h3>
+      <p>Po zalogowaniu użytkownik ma możliwość synchronizacji danych za pomocą przycisku "Synchronizuj". Przycisk ten wywołuje metodę sync(), która pobiera rekordy z lokalnej
+        bazy i za pomocą metody POST dodaje dane do bazy MongoDB</p>
+      <p>Plik database.php jest interfejsem dostepu do bazy danych, zawiera funkcję pobierające, oraz dodające rekordy z i do bazy</p>
+      <p>Plik rest.php jest interfejsem dostępu do aplikacji, klasa obsługująca żądania protokołu HTTP</p>
+      <p>Plik api.php jest to klasa implementująca funkcjonalności aplikacji</p>
+      <p>Plik .htaccess jest plikiem rzutującym adresy URL na odpowiednie żądania QUERY_STRING.</p>
+      <p>Strona ta jak nazwa wskazuje może służyć do obsługi Antykwariatu. Po zakupie książek, pracownik wprowadza dane książki, to jest jej tytuł oraz ocenia jej stan fizyczny.
+        Za pomocą średniej książek, właściciel antykwariatu może zweryfikować czy częściej kupuje od klientów książki zniszczone czy w dobrym stanie. Dzięki przechowywaniu rekordów
+        w lokalnej bazie strona może działać bez dostępu do internetu, co pozwala na dalszą prace w przypadku usterek</p>
+    </article>
+
+    <footer>
+      Copyright &copy; Konrad Pasik
+      <a href="doc.html">Dokumentacja</a>
+    </footer>
+
+</body>
+</html>

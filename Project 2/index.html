@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+  <title>Antykwariat</title>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="checkSession();">
+
+  <header>
+    <nav>
+      <ul id="list">
+        <li onclick="wyswietlKsiazki();">Ksiazki</li>
+        <li onclick="sredniaStanu();">Średnia stanu Książek</li>
+        <li id="zapisaneOffline">Książki zapisane offline</li>
+        <li onclick="panelUzytkownika();" id="Panel">Panel użytkownika</li>
+      </ul>
+    </nav>
+  </header>
+
+    <article>
+      <div id="data"></div>
+      <div id="result"></div> 
+      <div id="dodajKsiazke">
+        <table>
+          <thead><tr><td colspan="2">Dodaj książke</td></tr></thead>
+          <form method="post">
+          <tr>
+            <td class="leftColumn">Stan Książki</td>
+            <td>
+              <input type="text" value="" pattern="[0-9]{1}" name="ocena" id="ocena" required />
+              &nbsp;<span class="tooltip">&#9432;<span class="tooltiptext">Ocena Stanu Książki: zakres 0-9</span></span>
+            </td>
+	        </tr>
+          <tr>
+            <td class="leftColumn">Tytul</td>
+	           <td>
+              <input type="text" value="" name="opinia" id="opinia" required />
+              &nbsp;<span class="tooltip">&#9432;<span class="tooltiptext">Podaj tytul ksiazki</span></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;"><button type="button" id='dodaj' onclick="return false;">Dodaj</button></td>
+          </tr>
+          </form>
+        </table>
+        <span id="status"></span>
+      </div>
+    </article>
+
+    <footer>
+      Copyright &copy; Konrad Pasik
+      <a href="doc.html">Dokumentacja</a>
+    </footer>
+
+</body>
+</html>

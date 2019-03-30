@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Wahadło Matematyczne</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+	<header>
+		<div class="title">Wahadło Matematyczne</div>
+		<nav>
+			<ul class="nav-list">
+        <li class="style">Wstęp</li>
+				<li class="style">Wahadło Matematyczne</li>
+				<li class="style">Wzory</li>
+				<li class="style">Pierwszy zegar wahadłowy</li>
+      </ul>
+		</nav>
+	</header>
+
+	<article>
+		<div class="start show">
+			<canvas id="wachadlo1" width="700" height="600"></canvas>
+		</div>
+		<div class="wstep hide">
+			<img src="images/wachadlo1.JPG" alt="zdjecie wahadla"/>
+			<div class="tresc">
+				<h1>Wstęp</h1>
+				<p><b>Wahadło</b> – ciało zawieszone w jednorodnym polu grawitacyjnym w taki sposób, że może wykonywać drgania wokół poziomej osi nie przechodzącej przez środek ciężkości zawieszonego ciała.
+					W mechanice rozróżnia się dwa podstawowe rodzaje wahadeł:</p>
+		      <p><b>&nbsp;&nbsp;•&nbsp;&nbsp;matematyczne (proste) </b></p>
+					<p>&nbsp;&nbsp;•&nbsp;&nbsp;fizyczne</p>
+				<p>Ważną cechą wahadeł fizycznego i matematycznego jest niemal pełna niezależność ich okresu drgań od amplitudy, co jest dobrze spełnione dla małych wychyleń[a]. Własność ta, zwana izochronizmem drgań, została odkryta około 1602 roku przez Galileusza, który używał wahadła do pomiaru czasu.</p>
+				<p>W ogólności wahadło jest oscylatorem anharmonicznym, jego okres drgań i inne parametry zależy od amplitudy. Opis matematyczny rozwiązań równania ruchu wahadła jest w ogólności dość złożony, ale założenia upraszczające przyjmowane dla małych amplitud drgań pozwalają rozwiązać równania ruchu w sposób analityczny.
+				</p>
+				<p>Na tej stronie zajmiemy się wachadłem matematycznym</p>
+			</div>
+		</div>
+		<div class="mat hide">
+			<div class="wach_mat">
+				<canvas id="wachadlo2" width="300" height="400"></canvas>
+			</div>
+			<div class="tresc">
+				<h1>Wahadło Matematyczne</h1>
+				<p><b>Wahadło matematyczne</b> (wahadło proste) jest to ciało o masie punktowej zawieszone na cienkiej, nierozciągliwej nici. Kiedy ciało wytrącimy z równowagi, zaczyna się ono wahać w płaszczyźnie pionowej pod wpływem siły ciężkości. Jest to ruch okresowy. Ponieważ okres wahadła prostego nie zależy praktycznie od amplitudy, więc takie wahadło stosujemy do mierzenia czasu. Gdy siły hamujące zmniejszą amplitudę wahań, okres pozostanie prawie zupełnie niezmieniony.
+				</p>
+				<p>Wahadło matematyczne jest również wygodnym narzędziem pomiaru przyspieszenia ziemskiego g. Zamiast wykonywać doświadczenie ze spadkiem swobodnym ciał, wystarczy po prostu zmierzyć długosc wachadła oraz jego okres.
+				</p>
+			</div>
+		</div>
+		<div class="wzory hide">
+			<img src="images/wach.png" alt="zdjecie wahadla"/>
+			<div class="tresc">
+				<h1>Wzory</h1>
+				<p>Rysunek przedstawia wahadło o długości l i masie m, odchylone od pionu o kąt α. Na masę m działa siła przyciągania grawitacyjnego (siła ciężkości) wyrażana wzorem Q = mg oraz siła naprężenia (naciągu) nici N.
+				Siłę ciężkości rozkładamy na składowe:
+				</p>
+				<p>&nbsp;&nbsp;•&nbsp;&nbsp;jedna składowa równoważy siłę naprężenia:</p>
+				<h2>Q<sub>1</sub> = m*g*cos &alpha; = N</h2>
+				<p>&nbsp;&nbsp;•&nbsp;&nbsp;druga składowa dostarcza niezbędnego przyspieszenia dośrodkowego do utrzymania ruchu po łuku okręgu. Siła ta jest zwrócona przeciwnie do przesunięcia, więc: </p>
+				<h2>F = Q<sub>2</sub> = -m*g*sin &alpha;</h2>
+				<p>Minus oczywiście nie oznacza, że wartość siły jest ujemna, tylko to, że zwrot działania siły jest przeciwny do zwrotu przesunięcia.</p>
+				<p>Jeżeli kąt α jest mały, to sinα jest bardzo bliskie α mierzonemu w radianach: </p>
+				<table>
+					<tr>
+						<td>x</td>
+						<td>sin x</td>
+						<td>Różnica w %</td>
+					</tr>
+					<tr>
+						<td>0&deg; = 0.00000 rad</td>
+						<td>0.00000</td>
+						<td>0.00</td>
+					</tr>
+					<tr>
+						<td>2&deg; = 0.03491 rad</td>
+						<td>0.03490</td>
+						<td>0.03</td>
+					</tr>
+					<tr>
+						<td>5&deg; = 0.08727 rad</td>
+						<td>0.08716</td>
+						<td>0.24</td>
+					</tr>
+					<tr>
+						<td>10&deg; = 0.17453 rad</td>
+						<td>0.17365</td>
+						<td>0.50</td>
+					</tr>
+					<tr>
+						<td>15&deg; = 0.26180 rad</td>
+						<td>0.25882</td>
+						<td>1.14</td>
+					</tr>
+				</table>
+				<p>Przemieszczenie wzdłuż łuku wynosi:</p>
+				<h2>x = l*a</h2>
+				<p>i dla małych kątów ruch jest w przybliżeniu prostoliniowy. Przyjmując, że:</p>
+				<h2>sin &alpha; &asymp; &alpha;</h2>
+				<p>otrzymujemy: </p>
+				<h2>F = -m*g*&alpha; = -m*g*x&frasl;l </h2>
+				<p>Zauważ, że stała mg/l określa stałą k w równaniu F = -kx </p>
+				<h2>k = m*g&frasl;l </h2>
+				<p>Przy małej amplitudzie okres wahadła matematycznego wynosi więc:</p>
+				<h2>T = 2*&pi;*&radic;(m&frasl;k) </h2>
+				<h2>T = 2*&pi;*&radic;(m&frasl;(m*g)&frasl;l) </h2>
+				<h2>T = 2*&pi;*&radic;(l&frasl;g) </h2>
+				<p>Zauważ, że okres nie zależy od masy wahadła.</p>
+			</div>
+		</div>
+		<div class="zegar hide">
+			<img src="images/zegar.png" alt="zdjecie zegara"/>
+			<div class="tresc">
+				<h1>Pierwszy zegar wahadłowy</h1>
+				<p>Pierwszy zegar wahadłowy został zbudowany przez Christiaana Huygensa, który około roku 1657 zastosował w praktyce prawo ruchu wahadłowego sformułowane przez Galileusza. Ówczesne zegary posiadały jedynie wskazówkę godzinową, jednak od ok. roku 1600 zaczęto stosować także wskazówkę minutową. Rozwój konstrukcji wychwytów powodował dalsze usprawnienie pracy zegarów wahadłowych do momentu skonstruowania przez George’a Grahama wychwytu spoczynkowego (w r. 1715), który pod nazwą wychwytu Grahama jest stosowany do dziś. Przed skonstruowaniem zegara przez Huygensa, wahadło wykorzystywano do mierzenie czasu przy ręcznym podtrzymywani jego ruchu -np. w 1654 r. Jan Heweliusz podczas swoich obserwacji astronomicznych, który potem z powodzeniem używał też wahadła w konstruowanych przez siebie zegarach
+				</p>
+				<p>Najdokładniejszy zegar wahadłowy, będący jednocześnie zegarem elektronicznym. Czas odmierza wahadło poruszające się w rurze w której zapewnione jest stałe niskie ciśnienie i stała temperatura. Wahadło nie napędza mechanizmu a jego wahnięcia są zliczane przez fotokomórkę, a te są prezentowane na monitorze komputera. Ruch wahadła jest podtrzymywany przez kulkę o masie 4 g spadającą z wysokości 5 cm, raz na 10 minut na boczną powierzchnię wahadła. Zegar został skonstruowany przez pracowników Muzeum Zegarów Wieżowych w Gdańsku. Jest on kilkunastokrotnie dokładniejszy od innych konstrukcji, wskazania zegara kształtują się w zakresie kilkudziesięciu mikrosekund odchylenia na dobę</p>
+			</div>
+		</div>
+		<div class="docu hide">
+			<div class="tresc">
+				<h1>Dokumentacja</h1>
+				<p>Projekt został wykonany przy użyciu technologii HTML5 z wykorzystaniem CSS3 oraz JavaScript.</p>
+				<p>Animacja wahadła została wykonana w technologii Canvas</p>
+				<p>Do obsługi navbara wykorzystano metodę click oraz metodę addEventListener, pozwala to na pokazywaniu nowej treści oraz ukrywania poprzedniej.</p>
+				<p>Nagłówek strony przekierowuje użytkownika na stronę początkową.</p>
+			</div>
+		</div>
+	</article>
+
+	<footer>
+		<p>&copy; Konrad Pasik</p>
+		<div class="doc">Dokumentacja</div>
+	</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

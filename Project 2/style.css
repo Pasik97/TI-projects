@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  background-color: rgb(227, 231, 237);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  background-color: rgb(52, 63, 83);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+nav ul li {
+  padding: 0px 20px 0px 20px;
+  margin: 1px;
+  border-bottom: 2px solid rgb(52, 63, 83);
+  transition: all .5s ease;
+}
+
+nav ul li:hover {
+  border-color: white;
+  cursor: pointer;
+}
+
+nav ul li:last-child {
+  margin-left: 60px;
+}
+
+article {
+  margin: auto;
+  width: 700px;
+  padding-top: 60px;
+  text-align: justify;
+  font-size: 17px;
+  flex: 1;
+}
+
+#welcome{
+  height: 600px;
+}
+
+#dodajKsiazke{
+  display: none;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#data, #result {
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+table{
+  width: 100%;
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(52, 63, 83);
+}
+
+td{
+  padding: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-top: -1px;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    text-align: center;
+    width: 180px;
+    position: absolute;
+    background-color: black;
+    visibility: hidden;
+    color: #fff;
+    z-index: 1;
+    border-radius: 6px;
+    padding: 5px 0;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.leftColumn {
+  padding-left: 50px;
+  width: 40%;
+}
+
+a{
+  color: white;
+  padding-top: 5px;
+  text-decoration: none;
+}
+
+a:hover, a:visited{
+  color: white;
+}
+
+footer{
+  background-color: rgb(52, 63, 83);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+}
+
+p{
+  padding-top: 10px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+h1{
+  padding-top: 10px;
+  color: rgb(52, 63, 83);
+}
+
+h3{
+  padding-top: 10px;
+  color: red;
+}
